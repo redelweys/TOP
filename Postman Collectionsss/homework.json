@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "6a98c99a-218d-4d67-94be-cbdf3adb4dd3",
+		"name": "homework",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "640d7967-e211-4709-a486-d47402ff897d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "d18e59c2-fd6d-4454-a3b6-5800423e87ce",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 100ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(100);\r",
+							"});\r",
+							"pm.test(\"Cache-Control\", function () {\r",
+							"    pm.response.to.have.header(\"Cache-Control\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "2ad513ee-1144-402d-b8b7-074139bcec24",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "Referer",
+						"value": "https://vk.com/"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://st7-22.vk.com/dist/web/upload.714d12a3.js"
+			},
+			"response": []
+		},
+		{
+			"name": "Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "04270f32-b992-4349-8667-477e4ef2afc2",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 80ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(80);\r",
+							"});\r",
+							"pm.test(\"Server is present\", function () {\r",
+							"    pm.response.to.have.header(\"Server\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "64e7956d-ada5-4e27-969e-bf12deff197d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authority",
+						"value": "vk.com"
+					},
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "accept-language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "cookie",
+						"value": "remixlang=0; remixstlid=9059295913798735499_NK49Zb0DxYyMg7QkEUYFwsJXyA5h8U2KT8CywTTrk9L; remixuas=Y2M4NmZkZWNkYTFhYjJlMjNjMzEyMWY3; remixstid=307158645_BjEd1Bl8qFnXml5YBBzsAqXkTt81tOsKARDBM6zWYSL; remixua=-1%7C-1%7C202%7C891348744; remixlgck=5627bb2c0148ed0d0a; remixrefkey=f6e50e71bfd1d22375; remixscreen_width=1920; remixscreen_height=1080; remixscreen_dpr=1; remixscreen_depth=24; remixscreen_winzoom=1.90; remixdark_color_scheme=0; remixcolor_scheme_mode=auto; remixdt=0; remixlns=bc3dac848c7b592bc6"
+					},
+					{
+						"key": "origin",
+						"value": "https://vk.com"
+					},
+					{
+						"key": "referer",
+						"value": "https://vk.com/widget_community_messages.php?app=7625524&width=300px&_ver=1&gid=62820560&disable_welcome_screen=1&ref_source_info=undefined&ref_source_link=https%3A%2F%2Fthedoctorteam.ru%2Fproject%2Fmlp%2Fseason-9-5%2Fmemories-and-more%2Foriginal%2Fru&tooltip_text=%D0%9F%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B+%D1%81+%D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%BC%3F&domain=thedoctorteam.ru&button_position=undefined&height=399&url=https%3A%2F%2Fthedoctorteam.ru%2Fproject%2Fmlp%2Fseason-9-5%2Fmemories-and-more%2Foriginal%2Fru&referrer=https%3A%2F%2Fthedoctorteam.ru%2Fproject%2Fmlp%2Fseason-9-5&title=My+Little+Pony%3A+Friendship+Is+Magic+-+%D0%A1%D0%B5%D0%B7%D0%BE%D0%BD+9.5+-+Memories+and+More+%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B5%D1%82%D1%8C+%D0%BE%D0%BD%D0%BB...&18de66fdbb1=&act="
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"122\", \"Not(A:Brand\";v=\"24\", \"Google Chrome\";v=\"122\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-requested-with",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"type": "text",
+							"key": "act",
+							"value": "get_promoted_stickers"
+						},
+						{
+							"type": "text",
+							"key": "al",
+							"value": "1"
+						}
+					]
+				},
+				"url": "https://vk.com/al_im.php"
+			},
+			"response": []
+		}
+	]
+}
